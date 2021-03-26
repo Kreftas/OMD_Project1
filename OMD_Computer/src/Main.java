@@ -1,7 +1,4 @@
-import computer.Computer;
-import computer.Factorial;
-import computer.LongMemory;
-import computer.Program;
+import computer.*;
 
 public class Main {
 
