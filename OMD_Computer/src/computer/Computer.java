@@ -12,22 +12,14 @@ public class Computer {
 
     }
 
-
     public void load(Program program) {
         this.program = program;
     }
-
 
     public void run(){
         programCounter = 0;
         while(programCounter != -1) {
             program.get(programCounter).execute();
-
-
-
         }
-
     }
-
-
 }
