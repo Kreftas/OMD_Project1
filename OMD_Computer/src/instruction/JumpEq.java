@@ -1,5 +1,6 @@
 package instruction;
 
+import computer.Memory;
 import operand.Operand;
 
 public class JumpEq implements Instruction {
@@ -13,7 +14,7 @@ public class JumpEq implements Instruction {
     }
 
     @Override
-    public void execute() {
+    public void execute(Memory memory) {
 
     }
 

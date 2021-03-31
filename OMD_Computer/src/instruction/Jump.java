@@ -1,5 +1,7 @@
 package instruction;
 
+import computer.Memory;
+
 public class Jump implements Instruction{
     private int dest;
 
@@ -10,7 +12,7 @@ public class Jump implements Instruction{
     }
 
     @Override
-    public void execute() {
+    public void execute(Memory memory) {
 
     }
 

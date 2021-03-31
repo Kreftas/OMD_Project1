@@ -1,5 +1,6 @@
 package instruction;
 
+import computer.Memory;
 import operand.Address;
 import operand.Operand;
 
@@ -14,7 +15,7 @@ public class Copy implements Instruction {
     }
 
     @Override
-    public void execute() {
+    public void execute(Memory memory) {
 
     }
 

@@ -1,5 +1,7 @@
 package instruction;
 
+import computer.Memory;
+
 public class Halt implements Instruction{
 
     public Halt() {
@@ -7,7 +9,7 @@ public class Halt implements Instruction{
     }
 
     @Override
-    public void execute() {
+    public void execute(Memory memory) {
 
     }
 

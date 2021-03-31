@@ -1,5 +1,6 @@
 package instruction;
 
+import computer.Memory;
 import operand.Address;
 import operand.Operand;
 import operand.Word;
@@ -21,7 +22,7 @@ public abstract class Expression implements Instruction{
     protected abstract Word op(Operand op1, Operand op2);
 
     @Override
-    public void execute() {
+    public void execute(Memory memory) {
         Word value = op(op1, op2);
     }
 
