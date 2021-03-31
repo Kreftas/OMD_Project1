@@ -2,6 +2,6 @@ package operand;
 
 public interface Operand {
 
-    public long getValue ();
-    public void setValue();
+    public long getValue(Word word);
+    public void setValue(Word word);
 }
