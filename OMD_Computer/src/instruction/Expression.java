@@ -22,10 +22,7 @@ public abstract class Expression implements Instruction{
 
     @Override
     public void execute() {
-
-    Word value = op(op1, op2);
-
-
+        Word value = op(op1, op2);
     }
 
     @Override

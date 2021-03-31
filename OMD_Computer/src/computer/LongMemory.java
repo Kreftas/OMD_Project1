@@ -2,18 +2,19 @@ package computer;
 
 
 import operand.Address;
+import operand.LongWord;
 import operand.Operand;
 
 public class LongMemory extends Memory {
-    private long[] memory;
-
     public LongMemory(int size) {
-        memory = new long[size];
+        super(size);
+        populate(size);
     }
 
-    public void setAtAddress(Address address, Operand operand) {
-        memory[(int) address.getValue()] = operand.getValue();
+    @Override
+    public void populate(int size) {
+        for (int i = 0; i < size; i++) {
+            this.memory[i] = new LongWord(0);
+        }
     }
-
-
 }
