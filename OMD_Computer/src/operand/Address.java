@@ -3,10 +3,14 @@ package operand;
 
 public class Address extends Operand {
 
-    public Address(int value) {
-        super(value);
+    private int adress;
+
+    public Address(int memIndex) {
+        super(memIndex);
 
     }
+
+
 
     @Override
     public String toString() {
