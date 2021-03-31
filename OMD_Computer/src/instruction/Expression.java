@@ -16,7 +16,6 @@ public abstract class Expression implements Instruction{
         this.adress = adress;
         this.op1 = op1;
         this.op2 = op2;
-
     }
 
     protected abstract Word op(Operand op1, Operand op2);
@@ -24,6 +23,7 @@ public abstract class Expression implements Instruction{
     @Override
     public void execute(Memory memory) {
         Word value = op(op1, op2);
+        adress.getWord(memory).
     }
 
     @Override

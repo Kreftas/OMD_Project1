@@ -1,15 +1,7 @@
 package operand;
 
-public class Operand {
-    protected long value;
+public interface Operand {
 
-    public Operand(int value) {
-        this.value = value;
-    }
-
-    public long getValue () {
-        return value;
-    }
-
-
+    public long getValue ();
+    public void setValue();
 }
