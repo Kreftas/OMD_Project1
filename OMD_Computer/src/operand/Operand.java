@@ -1,7 +1,8 @@
 package operand;
 
+import computer.Memory;
+
 public interface Operand {
 
-    public long getValue(Word word);
-    public void setValue(Word word);
+    public Word getWord(Memory Context);
 }

@@ -3,11 +3,10 @@ package operand;
 
 import computer.Memory;
 
-public class Address extends Operand {
+public class Address implements Operand {
 
     private int adress;
     public Address(int memIndex) {
-        super(memIndex);
         this.adress = memIndex;
     }
 
@@ -17,7 +16,7 @@ public class Address extends Operand {
 
     @Override
     public String toString() {
-        return "[" + value + "]";
+        return "[" + adress + "]";
     }
 
 }
