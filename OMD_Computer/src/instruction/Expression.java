@@ -23,7 +23,7 @@ public abstract class Expression implements Instruction{
     @Override
     public void execute(Memory memory) {
         Word value = op(op1, op2);
-        adress.getWord(memory).
+        adress.getWord(memory).setValue(value);
     }
 
     @Override

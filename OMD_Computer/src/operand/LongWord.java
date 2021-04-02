@@ -1,18 +1,21 @@
 package operand;
 
-import computer.Memory;
-import operand.Word;
-
 public class LongWord implements Word {
 
-    public LongWord(int value) {
-        //super(value);
-
+    private long value;
+    public LongWord(long value) {
+        this.value = value;
     }
 
+    @Override
+    public void setValue(Word w1) {
+        if (w1 instanceof LongWord){
+            this.value = (long) w1.getValue();
+        }
+    }
 
     @Override
-    public Word getWord(Memory Context) {
-        return null;
+    public Object getValue() {
+        return value;
     }
 }

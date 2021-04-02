@@ -1,8 +1,6 @@
 package operand;
 
-import computer.Memory;
-import operand.Operand;
-
-public interface Word extends Operand {
-
+public interface Word <V> extends Operand {
+    public void setValue(Word w1);
+    public V getValue();
 }
