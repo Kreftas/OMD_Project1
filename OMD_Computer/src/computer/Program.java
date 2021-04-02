@@ -4,11 +4,9 @@ import instruction.Instruction;
 
 import java.util.ArrayList;
 
-public  class Program extends ArrayList<Instruction> {
-
+public abstract class Program extends ArrayList<Instruction> {
 
     public Program () {
-
     }
 
     @Override
@@ -23,9 +21,4 @@ public  class Program extends ArrayList<Instruction> {
         }
         return sb.toString();
     }
-
-
-
-
-
 }
