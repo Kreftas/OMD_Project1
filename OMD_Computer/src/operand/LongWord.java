@@ -28,7 +28,7 @@ public class LongWord implements Word {
         if (w1 instanceof LongWord){
             return new LongWord(this.value + ((LongWord) w1).value);
         } else{
-            throw  new IllegalArgumentException();
+            throw new IllegalArgumentException();
         }
     }
 
@@ -37,7 +37,7 @@ public class LongWord implements Word {
         if (w1 instanceof LongWord){
             return new LongWord(this.value * ((LongWord) w1).value);
         } else {
-            throw  new IllegalArgumentException();
+            throw new IllegalArgumentException();
         }
     }
 
