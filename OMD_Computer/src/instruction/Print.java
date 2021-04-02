@@ -13,7 +13,7 @@ public class Print implements Instruction{
 
     @Override
     public void execute(Memory memory) {
-
+        System.out.println(op.toString());
     }
 
     @Override
