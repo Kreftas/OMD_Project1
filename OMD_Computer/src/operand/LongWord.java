@@ -19,6 +19,11 @@ public class LongWord implements Word {
     }
 
     @Override
+    public Object getValue() {
+        return value;
+    }
+
+    @Override
     public Word add(Word w1) {
         if (w1 instanceof LongWord){
             return new LongWord(this.value + ((LongWord) w1).value);
@@ -45,5 +50,4 @@ public class LongWord implements Word {
     public String toString(){
         return Long.toString(value);
     }
-
 }
