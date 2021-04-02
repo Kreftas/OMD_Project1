@@ -9,7 +9,6 @@ public class Computer {
 
     public Computer(Memory memory) {
         this.memory = memory;
-
     }
 
     public void load(Program program) {
