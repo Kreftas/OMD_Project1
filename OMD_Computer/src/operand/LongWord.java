@@ -37,4 +37,9 @@ public class LongWord implements Word {
     public Word getWord(Memory Context) {
         return this;
     }
+
+    @Override
+    public String toString(){
+        return Long.toString(value);
+    }
 }
