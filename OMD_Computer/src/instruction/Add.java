@@ -12,7 +12,7 @@ public class Add extends Expression {
     }
 
     @Override
-    protected void op(Word w1, Word w2) {
-        w1.add(w2);
+    protected Word op(Word w1, Word w2) {
+        return w1.add(w2);
     }
 }
