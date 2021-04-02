@@ -4,7 +4,7 @@ import instruction.Instruction;
 
 public class Computer {
     private Program program;
-    private int programCounter;
+
     private Memory memory;
 
     public Computer(Memory memory) {
@@ -17,9 +17,10 @@ public class Computer {
     }
 
     public void run(){
-        programCounter = 0;
-        while(programCounter != -1) {
-            program.get(programCounter).execute(memory);
+        memory.setProgramCounter(0);
+        while(memory.getProgramCounter() != -1) {
+            program.get(memory.getProgramCounter()).execute(memory);
         }
     }
+
 }

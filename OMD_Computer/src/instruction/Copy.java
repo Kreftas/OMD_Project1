@@ -16,6 +16,7 @@ public class Copy implements Instruction {
     @Override
     public void execute(Memory memory) {
         adress.getWord(memory).setValue(op.getWord(memory));
+        memory.incrProgramCounter();
     }
 
     @Override
