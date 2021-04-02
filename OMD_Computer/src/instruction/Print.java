@@ -13,7 +13,8 @@ public class Print implements Instruction{
 
     @Override
     public void execute(Memory memory) {
-        System.out.println(op.toString());
+        System.out.println(op.getWord(memory).toString());
+        memory.incrProgramCounter();
     }
 
     @Override
