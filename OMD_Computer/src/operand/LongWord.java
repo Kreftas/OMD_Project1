@@ -35,7 +35,7 @@ public class LongWord implements Word {
     @Override
     public Word mul(Word w1) {
         if (w1 instanceof LongWord){
-            return new LongWord(this.value + ((LongWord) w1).value);
+            return new LongWord(this.value * ((LongWord) w1).value);
         } else {
             throw  new IllegalArgumentException();
         }
