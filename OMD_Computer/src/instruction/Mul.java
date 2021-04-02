@@ -12,10 +12,7 @@ public class Mul extends Expression {
     }
 
     @Override
-    protected Word op(Operand op1, Operand op2) {
+    protected Word op(Word o1, Word o2) {
         return null;
     }
-
-
-
 }

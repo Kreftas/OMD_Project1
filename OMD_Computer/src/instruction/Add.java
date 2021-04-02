@@ -1,6 +1,7 @@
 package instruction;
 
 import operand.Address;
+import operand.LongWord;
 import operand.Operand;
 import operand.Word;
 
@@ -12,8 +13,8 @@ public class Add extends Expression {
     }
 
     @Override
-    protected Word op(Operand op1, Operand op2) {
-        return null;
+    protected Word op(Word w1, Word w2) {
+        return w1.add(w2);
     }
 
 }

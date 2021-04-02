@@ -8,7 +8,7 @@ import operand.Word;
 public abstract class Expression implements Instruction{
 
     private Operand op1, op2;
-    private Address adress;
+    protected Address adress;
     private String opName;
 
 
@@ -18,11 +18,11 @@ public abstract class Expression implements Instruction{
         this.op2 = op2;
     }
 
-    protected abstract Word op(Operand op1, Operand op2);
+    protected abstract Word op(Word w1, Word w2);
 
     @Override
     public void execute(Memory memory) {
-        Word value = op(op1, op2);
+        Word value = op(op1.getWord(memory), op2.getWord(memory));
         adress.getWord(memory).setValue(value);
     }
 
