@@ -11,7 +11,7 @@ public class Mul extends Expression {
     }
 
     @Override
-    protected Word op(Word o1, Word o2) {
-        return o1.mul(o2);
+    protected void op(Word o1, Word o2) {
+        o1.mul(o2);
     }
 }
