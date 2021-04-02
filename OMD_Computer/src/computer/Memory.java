@@ -2,12 +2,19 @@ package computer;
 
 import operand.Word;
 
+import java.util.Arrays;
+
 public abstract class Memory{
 
     protected Word [] memory;
     private int programCounter;
     public Memory(int size){
         memory = new Word[size];
+    }
+
+    public void printMemory() {
+        System.out.println(memory[0] + " " + memory[1]);
+//        System.out.println(Arrays.toString(memory));
     }
 
     public Word get(int address){

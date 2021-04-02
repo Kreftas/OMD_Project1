@@ -11,6 +11,19 @@ public  class Program extends ArrayList<Instruction> {
 
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        int count = 0;
+        for(Instruction i : this) {
+            sb.append(count).append(" ");
+            sb.append(i.toString());
+            sb.append("\n");
+            count++;
+        }
+        return sb.toString();
+    }
+
 
 
 
