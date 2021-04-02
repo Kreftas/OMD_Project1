@@ -19,9 +19,6 @@ public class Factorial extends Program {
         add(new Halt());
     }
 
-
-
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

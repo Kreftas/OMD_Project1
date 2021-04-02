@@ -9,12 +9,10 @@ public class Add extends Expression {
 
     public Add (Operand op1, Operand op2, Address adress) {
         super(op1, op2, adress, "ADD");
-
     }
 
     @Override
     protected Word op(Word w1, Word w2) {
         return w1.add(w2);
     }
-
 }

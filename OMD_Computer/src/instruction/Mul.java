@@ -6,7 +6,6 @@ import operand.Word;
 
 public class Mul extends Expression {
 
-
     public Mul (Operand op1, Operand op2, Address adress) {
         super(op1, op2, adress, "MUL");
     }
