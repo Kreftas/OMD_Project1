@@ -11,7 +11,6 @@ public class Copy implements Instruction {
     public Copy(Operand op, Address adress) {
         this.adress = adress;
         this.op = op;
-
     }
 
     @Override
