@@ -15,7 +15,11 @@ public class JumpEq implements Instruction {
 
     @Override
     public void execute(Memory memory) {
-
+        if(op1.getWord(memory).getValue()==op2.getWord(memory).getValue()){
+            memory.setProgramCounter(dest);
+        } else {
+            memory.incrProgramCounter();
+        }
     }
 
     @Override

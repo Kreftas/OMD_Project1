@@ -25,7 +25,7 @@ public abstract class Expression implements Instruction{
     public void execute(Memory memory) {
         Word value = op(op1.getWord(memory), op2.getWord(memory));
         address.getWord(memory).setValue(value);
-        // ÖKA PC + 1
+        memory.incrProgramCounter();
     }
 
     @Override

@@ -13,7 +13,7 @@ public class Jump implements Instruction{
 
     @Override
     public void execute(Memory memory) {
-
+        memory.setProgramCounter(dest);
     }
 
     @Override
