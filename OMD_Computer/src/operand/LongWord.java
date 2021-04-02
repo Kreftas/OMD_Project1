@@ -25,6 +25,16 @@ public class LongWord implements Word {
     }
 
     @Override
+    public Word mul(Word w1) {
+        if (w1 instanceof LongWord){
+            this.value *= ((LongWord) w1).value;
+            return this;
+        } else {
+            throw  new IllegalArgumentException();
+        }
+    }
+
+    @Override
     public Word getWord(Memory Context) {
         return this;
     }
@@ -33,4 +43,5 @@ public class LongWord implements Word {
     public String toString(){
         return Long.toString(value);
     }
+
 }
