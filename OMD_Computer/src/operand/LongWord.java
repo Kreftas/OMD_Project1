@@ -10,15 +10,6 @@ public class LongWord implements Word {
     }
 
     @Override
-    public void setValue(Word w1) {
-        if (w1 instanceof LongWord){
-            this.value = (long) w1.getValue();
-        } else{
-            throw new IllegalArgumentException();
-        }
-    }
-
-    @Override
     public Object getValue() {
         return value;
     }
