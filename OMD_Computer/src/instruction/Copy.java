@@ -1,5 +1,6 @@
 package instruction;
 
+import computer.Computer;
 import computer.Memory;
 import operand.Address;
 import operand.Operand;
@@ -14,9 +15,9 @@ public class Copy implements Instruction {
     }
 
     @Override
-    public void execute(Memory memory) {
+    public void execute(Memory memory, Computer pc) {
         adress.getWord(memory).setValue(op.getWord(memory));
-        memory.incrProgramCounter();
+        pc.incrProgramCounter();
     }
 
     @Override

@@ -4,6 +4,7 @@ import instruction.Instruction;
 
 public class Computer {
     private Program program;
+    private int programCounter;
 
     private Memory memory;
 
@@ -16,10 +17,23 @@ public class Computer {
     }
 
     public void run(){
-        memory.setProgramCounter(0);
-        while(memory.getProgramCounter() != -1) {
-            program.get(memory.getProgramCounter()).execute(memory);
+        setProgramCounter(0);
+        while(getProgramCounter() != -1) {
+            program.get(getProgramCounter()).execute(memory, this);
         }
+    }
+
+
+    public int getProgramCounter() {
+        return programCounter;
+    }
+
+    public void setProgramCounter(int programCounter) {
+        this.programCounter = programCounter;
+    }
+
+    public void incrProgramCounter() {
+        programCounter++;
     }
 
 }

@@ -1,5 +1,6 @@
 package instruction;
 
+import computer.Computer;
 import computer.Memory;
 import operand.Address;
 import operand.Operand;
@@ -22,9 +23,9 @@ public abstract class Expression implements Instruction{
     protected abstract void op(Word w1, Word w2);
 
     @Override
-    public void execute(Memory memory) {
+    public void execute(Memory memory, Computer pc) {
         op(op1.getWord(memory), op2.getWord(memory));
-        memory.incrProgramCounter();
+        pc.incrProgramCounter();
     }
 
     @Override

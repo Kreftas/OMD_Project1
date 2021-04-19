@@ -13,7 +13,7 @@ public class LongWord implements Word {
     public void setValue(Word w1) {
         if (w1 instanceof LongWord){
             this.value = ((LongWord) w1).value;
-        } else{
+        } else {
             throw new IllegalArgumentException();
         }
     }
@@ -27,7 +27,7 @@ public class LongWord implements Word {
     public void add(Word w1) {
         if (w1 instanceof LongWord){
             this.value +=((LongWord) w1).value;
-        } else{
+        } else {
             throw new IllegalArgumentException();
         }
     }

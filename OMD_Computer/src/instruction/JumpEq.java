@@ -1,5 +1,6 @@
 package instruction;
 
+import computer.Computer;
 import computer.Memory;
 import operand.Operand;
 
@@ -14,11 +15,11 @@ public class JumpEq implements Instruction {
     }
 
     @Override
-    public void execute(Memory memory) {
+    public void execute(Memory memory, Computer pc) {
         if(op1.getWord(memory).getValue()==op2.getWord(memory).getValue()){
-            memory.setProgramCounter(dest);
+            pc.setProgramCounter(dest);
         } else {
-            memory.incrProgramCounter();
+            pc.incrProgramCounter();
         }
     }
 

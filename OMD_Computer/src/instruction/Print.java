@@ -1,5 +1,6 @@
 package instruction;
 
+import computer.Computer;
 import computer.Memory;
 import operand.Operand;
 
@@ -12,9 +13,9 @@ public class Print implements Instruction{
     }
 
     @Override
-    public void execute(Memory memory) {
+    public void execute(Memory memory, Computer pc) {
         System.out.println(op.getWord(memory).toString());
-        memory.incrProgramCounter();
+        pc.incrProgramCounter();
     }
 
     @Override
