@@ -1,4 +1,6 @@
 import computer.*;
+import program.Factorial;
+import program.Program;
 
 public class Main {
 

@@ -1,6 +1,6 @@
 package computer;
 
-import instruction.Instruction;
+import program.Program;
 
 public class Computer {
     private Program program;
