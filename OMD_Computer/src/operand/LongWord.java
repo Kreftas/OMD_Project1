@@ -24,18 +24,19 @@ public class LongWord implements Word {
     }
 
     @Override
-    public Word add(Word w1) {
+    public void add(Word w1) {
         if (w1 instanceof LongWord){
-            return new LongWord(this.value + ((LongWord) w1).value);
+            //return new LongWord(this.value + ((LongWord) w1).value);
+            this.value+=((LongWord) w1).value;
         } else{
             throw new IllegalArgumentException();
         }
     }
 
     @Override
-    public Word mul(Word w1) {
+    public void mul(Word w1) {
         if (w1 instanceof LongWord){
-            return new LongWord(this.value * ((LongWord) w1).value);
+            this.value*=((LongWord) w1).value;
         } else {
             throw new IllegalArgumentException();
         }

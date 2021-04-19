@@ -19,12 +19,12 @@ public abstract class Expression implements Instruction{
         this.opName = opName;
     }
 
-    protected abstract Word op(Word w1, Word w2);
+    protected abstract void op(Word w1, Word w2);
 
     @Override
     public void execute(Memory memory) {
-        Word value = op(op1.getWord(memory), op2.getWord(memory));
-        address.getWord(memory).setValue(value);
+        op(op1.getWord(memory), op2.getWord(memory));
+        //address.getWord(memory).setValue(value);
         memory.incrProgramCounter();
     }
 
