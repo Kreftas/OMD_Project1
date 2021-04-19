@@ -24,7 +24,6 @@ public abstract class Expression implements Instruction{
     @Override
     public void execute(Memory memory) {
         op(op1.getWord(memory), op2.getWord(memory));
-        //address.getWord(memory).setValue(value);
         memory.incrProgramCounter();
     }
 

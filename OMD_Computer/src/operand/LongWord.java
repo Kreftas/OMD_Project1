@@ -26,8 +26,7 @@ public class LongWord implements Word {
     @Override
     public void add(Word w1) {
         if (w1 instanceof LongWord){
-            //return new LongWord(this.value + ((LongWord) w1).value);
-            this.value+=((LongWord) w1).value;
+            this.value +=((LongWord) w1).value;
         } else{
             throw new IllegalArgumentException();
         }
@@ -36,7 +35,7 @@ public class LongWord implements Word {
     @Override
     public void mul(Word w1) {
         if (w1 instanceof LongWord){
-            this.value*=((LongWord) w1).value;
+            this.value *=((LongWord) w1).value;
         } else {
             throw new IllegalArgumentException();
         }
